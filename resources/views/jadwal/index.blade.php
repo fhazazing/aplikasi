@@ -23,7 +23,7 @@
                         <th scope="col">Waktu</th>
                         <th scope="col">Nama Dosen</th>
                         <th scope="col">Mata Kuliah</th>
-                        <th scope="col">ACTIONS</th>
+                        <th scope="col" style="width: 20%">ACTIONS</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -35,7 +35,7 @@
                         <td>{{ $data_jadwal->waktu }}</td>
                         <td>{{ $data_jadwal->nama_dosen }}</td>
                         <td>{{ $data_jadwal->nama_matakuliah }}</td>
-                        <td class="left">
+                        <td class="text-center">
                             <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('jadwal.destroy', $data_jadwal->id) }}" method="POST">
                                 <a href="{{ route('jadwal.show', $data_jadwal->id) }}" class="btn btn-sm btn-dark tooltip-test" title="Tooltip">SHOW</a>
                                 <a href="{{ route('jadwal.edit', $data_jadwal->id) }}" class="btn btn-sm btn-primary">EDIT</a>
